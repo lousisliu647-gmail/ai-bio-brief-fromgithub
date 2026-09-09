@@ -67,7 +67,7 @@ def summarize_with_groq(tweets):
 推文列表：
 {json.dumps(tweets, ensure_ascii=False, indent=2)}
 """
-
+"model": "openai/gpt-oss-20b",
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json"
