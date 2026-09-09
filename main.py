@@ -67,13 +67,13 @@ def summarize_with_groq(tweets):
 推文列表：
 {json.dumps(tweets, ensure_ascii=False, indent=2)}
 """
-"model": "openai/gpt-oss-20b",
+
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json"
     }
     data = {
-        "model": "llama-3.3-70b-versatile",
+        "model": "openai/gpt-oss-20b",
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.3
     }
